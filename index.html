@@ -7,36 +7,20 @@
 <title>Employer Profile Debrief — Gulf View Consulting</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --navy:   #1A2E4A;
-    --navy2:  #0F1E30;
-    --gold:   #C9922B;
-    --lgold:  #E8C97A;
-    --white:  #FFFFFF;
-    --lbg:    #F2F5F9;
-    --card:   #FFFFFF;
-    --muted:  #64748B;
-    --border: #D0DCE8;
-    --red:    #C0392B;
-    --lred:   #FDEDEC;
-    --lblue:  #A8C4E0;
-  }
-
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-html { scroll-behavior: smooth; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
 
 body {
 font-family: ‘DM Sans’, sans-serif;
-background: var(–lbg);
-color: var(–navy);
+background-color: #F2F5F9;
+color: #1A2E4A;
 overflow-x: hidden;
 }
 
-/* ── HERO ────────────────────────────────── */
+/* ── HERO ── */
 .hero {
-background: var(–navy2);
-color: var(–white);
+background-color: #0F1E30;
+color: #FFFFFF;
 padding: 72px 48px 60px;
 position: relative;
 overflow: hidden;
@@ -46,7 +30,7 @@ content: ‘’;
 position: absolute;
 left: 0; top: 0; bottom: 0;
 width: 6px;
-background: var(–gold);
+background-color: #C9922B;
 }
 .hero::after {
 content: ‘★’;
@@ -54,7 +38,7 @@ position: absolute;
 right: 48px; top: 50%;
 transform: translateY(-50%);
 font-size: 160px;
-color: rgba(201,146,43,0.08);
+color: rgba(201, 146, 43, 0.07);
 line-height: 1;
 pointer-events: none;
 }
@@ -62,93 +46,103 @@ pointer-events: none;
 font-family: ‘DM Mono’, monospace;
 font-size: 11px;
 letter-spacing: 0.2em;
-color: var(–lgold);
+color: #E8C97A;
 text-transform: uppercase;
 margin-bottom: 20px;
-opacity: 0; animation: fadeUp 0.5s 0.1s forwards;
+opacity: 0;
+animation: fadeUp 0.5s 0.1s forwards;
 }
 .hero h1 {
 font-family: ‘Bebas Neue’, sans-serif;
 font-size: clamp(52px, 8vw, 88px);
 line-height: 1;
 letter-spacing: 0.02em;
-opacity: 0; animation: fadeUp 0.5s 0.2s forwards;
+color: #FFFFFF;
+opacity: 0;
+animation: fadeUp 0.5s 0.2s forwards;
 }
-.hero h1 span { color: var(–gold); }
+.hero h1 span { color: #C9922B; }
 .hero-sub {
 margin-top: 20px;
 font-size: 15px;
-color: var(–lblue);
+color: #A8C4E0;
 font-weight: 300;
-opacity: 0; animation: fadeUp 0.5s 0.3s forwards;
+opacity: 0;
+animation: fadeUp 0.5s 0.3s forwards;
 }
 .hero-tags {
 display: flex; gap: 10px; flex-wrap: wrap;
 margin-top: 32px;
-opacity: 0; animation: fadeUp 0.5s 0.4s forwards;
+opacity: 0;
+animation: fadeUp 0.5s 0.4s forwards;
 }
 .hero-tag {
 font-family: ‘DM Mono’, monospace;
 font-size: 10px;
 letter-spacing: 0.12em;
 text-transform: uppercase;
-color: var(–navy);
-background: var(–gold);
+color: #1A2E4A;
+background-color: #C9922B;
 padding: 5px 14px;
 border-radius: 2px;
 font-weight: 500;
 }
 
-/* ── LAYOUT ──────────────────────────────── */
+/* ── LAYOUT ── */
 .container { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
 .section { padding: 64px 0 48px; }
+.bg-light { background-color: #F2F5F9; }
+.bg-white { background-color: #FFFFFF; }
 
-/* ── SECTION HEADER ──────────────────────── */
+/* ── SECTION HEADER ── */
 .section-header {
 display: flex; align-items: flex-start; gap: 20px;
 margin-bottom: 36px;
-opacity: 0; animation: fadeUp 0.5s forwards;
+opacity: 0;
+animation: fadeUp 0.5s forwards;
 animation-play-state: paused;
 }
 .section-header.visible { animation-play-state: running; }
 .section-num {
-font-family: ‘Bebas Neue’, sans-serif;
-font-size: 13px;
-letter-spacing: 0.18em;
-color: var(–gold);
-background: var(–navy);
+font-family: ‘DM Mono’, monospace;
+font-size: 10px;
+letter-spacing: 0.16em;
+color: #C9922B;
+background-color: #1A2E4A;
 padding: 6px 12px;
 white-space: nowrap;
-margin-top: 4px;
+margin-top: 6px;
 flex-shrink: 0;
+text-transform: uppercase;
 }
 .section-titles h2 {
 font-family: ‘Bebas Neue’, sans-serif;
 font-size: clamp(28px, 4vw, 40px);
 letter-spacing: 0.03em;
 line-height: 1.1;
-color: var(–navy);
+color: #1A2E4A;
 }
 .section-titles p {
 font-size: 13px;
-color: var(–muted);
+color: #64748B;
 font-style: italic;
 margin-top: 4px;
 }
 
-/* ── SNAPSHOT GRID ───────────────────────── */
+/* ── SNAPSHOT GRID ── */
 .snapshot-grid {
 display: grid;
 grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 gap: 12px;
 }
 .snap-card {
-background: var(–card);
-border: 1px solid var(–border);
-border-top: 4px solid var(–gold);
+background-color: #FFFFFF;
+border: 1px solid #D0DCE8;
+border-top: 4px solid #C9922B;
 padding: 18px 20px 16px;
 box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-opacity: 0; animation: fadeUp 0.4s forwards;
+opacity: 0;
+animation: fadeUp 0.4s forwards;
 animation-play-state: paused;
 transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -159,77 +153,77 @@ font-family: ‘DM Mono’, monospace;
 font-size: 9.5px;
 letter-spacing: 0.14em;
 text-transform: uppercase;
-color: var(–gold);
+color: #C9922B;
 font-weight: 500;
 margin-bottom: 6px;
 }
 .snap-value {
 font-size: 15px;
 font-weight: 600;
-color: var(–navy);
+color: #1A2E4A;
 line-height: 1.4;
 }
 
-/* ── STRATEGY CARDS ──────────────────────── */
+/* ── STRATEGY CARDS ── */
 .strategy-grid {
 display: grid;
 grid-template-columns: repeat(auto-fill, minmax(460px, 1fr));
 gap: 16px;
 }
-@media (max-width: 640px) { .strategy-grid { grid-template-columns: 1fr; } }
-
+@media (max-width: 640px) {
+.strategy-grid, .concerns-grid, .q-grid { grid-template-columns: 1fr; }
+}
 .strat-card {
-background: var(–card);
-border: 1px solid var(–border);
-border-top: 4px solid var(–gold);
-display: flex; gap: 0;
+background-color: #FFFFFF;
+border: 1px solid #D0DCE8;
+border-top: 4px solid #C9922B;
+display: flex;
 box-shadow: 0 2px 8px rgba(0,0,0,0.07);
 overflow: hidden;
-opacity: 0; animation: fadeUp 0.4s forwards;
+opacity: 0;
+animation: fadeUp 0.4s forwards;
 animation-play-state: paused;
 transition: transform 0.2s, box-shadow 0.2s;
 }
 .strat-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
 .strat-card.visible { animation-play-state: running; }
 .strat-num {
-background: var(–navy);
-color: var(–gold);
+background-color: #1A2E4A;
+color: #C9922B;
 font-family: ‘Bebas Neue’, sans-serif;
 font-size: 28px;
 width: 52px;
 min-width: 52px;
 display: flex; align-items: center; justify-content: center;
-letter-spacing: 0.02em;
 }
 .strat-body { padding: 18px 20px; }
 .strat-body h3 {
 font-size: 14px;
 font-weight: 700;
-color: var(–navy);
+color: #1A2E4A;
 margin-bottom: 8px;
 line-height: 1.3;
 }
 .strat-body p {
 font-size: 12.5px;
-color: var(–muted);
+color: #64748B;
 line-height: 1.7;
 }
 
-/* ── CONCERNS ────────────────────────────── */
+/* ── CONCERNS ── */
 .concerns-grid {
 display: grid;
 grid-template-columns: repeat(auto-fill, minmax(460px, 1fr));
 gap: 16px;
 }
-@media (max-width: 640px) { .concerns-grid { grid-template-columns: 1fr; } }
-
 .concern-card {
-background: var(–card);
-border: 1px solid var(–border);
-border-top: 4px solid var(–red);
+background-color: #FFFFFF;
+border: 1px solid #D0DCE8;
+border-top: 4px solid #C0392B;
 padding: 20px 22px;
 box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-opacity: 0; animation: fadeUp 0.4s forwards;
+opacity: 0;
+animation: fadeUp 0.4s forwards;
 animation-play-state: paused;
 transition: transform 0.2s;
 }
@@ -239,24 +233,21 @@ transition: transform 0.2s;
 display: flex; align-items: flex-start; gap: 8px;
 font-size: 13.5px;
 font-weight: 700;
-color: var(–red);
+color: #C0392B;
 margin-bottom: 10px;
 line-height: 1.4;
 }
-.concern-title .warn { font-size: 15px; flex-shrink: 0; margin-top: 1px; }
 .concern-risk {
 font-size: 12px;
-color: var(–muted);
+color: #64748B;
 font-style: italic;
 line-height: 1.6;
 margin-bottom: 14px;
 }
-.fix-row {
-display: flex; gap: 10px; align-items: flex-start;
-}
+.fix-row { display: flex; gap: 10px; align-items: flex-start; }
 .fix-badge {
-background: var(–gold);
-color: var(–navy);
+background-color: #C9922B;
+color: #1A2E4A;
 font-family: ‘DM Mono’, monospace;
 font-size: 9px;
 font-weight: 500;
@@ -267,25 +258,24 @@ margin-top: 2px;
 }
 .fix-text {
 font-size: 12.5px;
-color: var(–navy);
+color: #1A2E4A;
 line-height: 1.6;
 }
 
-/* ── QUESTIONS ───────────────────────────── */
+/* ── QUESTIONS ── */
 .q-grid {
 display: grid;
 grid-template-columns: 1fr 1fr;
 gap: 16px;
 }
-@media (max-width: 640px) { .q-grid { grid-template-columns: 1fr; } }
-
 .q-col {
-background: var(–card);
-border: 1px solid var(–border);
-border-top: 4px solid var(–gold);
+background-color: #FFFFFF;
+border: 1px solid #D0DCE8;
+border-top: 4px solid #C9922B;
 padding: 24px 24px 20px;
 box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-opacity: 0; animation: fadeUp 0.4s forwards;
+opacity: 0;
+animation: fadeUp 0.4s forwards;
 animation-play-state: paused;
 }
 .q-col.visible { animation-play-state: running; }
@@ -293,11 +283,11 @@ animation-play-state: paused;
 display: flex; align-items: center; gap: 10px;
 margin-bottom: 20px;
 padding-bottom: 14px;
-border-bottom: 1px solid var(–border);
+border-bottom: 1px solid #D0DCE8;
 }
 .q-col-head .icon {
-background: var(–navy);
-color: var(–gold);
+background-color: #1A2E4A;
+color: #C9922B;
 width: 32px; height: 32px;
 border-radius: 50%;
 display: flex; align-items: center; justify-content: center;
@@ -307,106 +297,95 @@ flex-shrink: 0;
 .q-col-head h3 {
 font-size: 15px;
 font-weight: 700;
-color: var(–navy);
+color: #1A2E4A;
 }
 .q-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
 .q-list li {
 display: flex; gap: 10px; align-items: flex-start;
 font-size: 12.5px;
-color: var(–muted);
+color: #64748B;
 line-height: 1.6;
 }
 .q-list li::before {
 content: ‘›’;
-color: var(–gold);
+color: #C9922B;
 font-size: 16px;
 font-weight: 700;
 flex-shrink: 0;
 margin-top: -1px;
 }
 
-/* ── BOTTOM LINE ─────────────────────────── */
+/* ── BOTTOM LINE ── */
 .bottom-line {
-background: var(–navy2);
-color: var(–white);
+background-color: #0F1E30;
+color: #FFFFFF;
 padding: 64px 48px 56px;
 position: relative;
 overflow: hidden;
-margin-top: 48px;
 }
 .bottom-line::before {
 content: ‘’;
 position: absolute;
 top: 0; left: 0; right: 0;
 height: 4px;
-background: var(–gold);
+background-color: #C9922B;
 }
 .bottom-line::after {
 content: ‘’;
 position: absolute;
 bottom: 0; left: 0; right: 0;
 height: 4px;
-background: var(–gold);
+background-color: #C9922B;
 }
 .bottom-line h2 {
 font-family: ‘Bebas Neue’, sans-serif;
 font-size: clamp(32px, 5vw, 52px);
 letter-spacing: 0.04em;
-color: var(–white);
+color: #FFFFFF;
 margin-bottom: 36px;
-opacity: 0; animation: fadeUp 0.5s forwards;
+opacity: 0;
+animation: fadeUp 0.5s forwards;
 animation-play-state: paused;
 }
 .bottom-line h2.visible { animation-play-state: running; }
 .bl-list { display: flex; flex-direction: column; gap: 18px; max-width: 860px; }
 .bl-item {
 display: flex; gap: 16px; align-items: flex-start;
-opacity: 0; animation: fadeUp 0.4s forwards;
+opacity: 0;
+animation: fadeUp 0.4s forwards;
 animation-play-state: paused;
 }
 .bl-item.visible { animation-play-state: running; }
-.bl-icon {
-font-size: 18px;
-flex-shrink: 0;
-margin-top: 1px;
-}
-.bl-icon.check { color: var(–gold); }
-.bl-icon.warn  { color: var(–lgold); }
-.bl-text {
-font-size: 15px;
-color: var(–white);
-line-height: 1.65;
-font-weight: 300;
-}
-.bl-text strong { font-weight: 600; color: var(–lgold); }
+.bl-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+.bl-icon.check { color: #C9922B; }
+.bl-icon.warn  { color: #E8C97A; }
+.bl-text { font-size: 15px; color: #FFFFFF; line-height: 1.65; font-weight: 300; }
+.bl-text strong { font-weight: 600; color: #E8C97A; }
 
-/* ── FOOTER ──────────────────────────────── */
+/* ── FOOTER ── */
 .footer {
-background: var(–navy2);
-color: var(–lblue);
+background-color: #0F1E30;
+color: #A8C4E0;
 text-align: center;
 padding: 20px 32px;
 font-family: ‘DM Mono’, monospace;
 font-size: 10px;
 letter-spacing: 0.1em;
 text-transform: uppercase;
-border-top: 1px solid rgba(168,196,224,0.15);
+border-top: 1px solid rgba(168, 196, 224, 0.15);
 }
 
-/* ── ANIMATIONS ──────────────────────────── */
+/* ── DIVIDER ── */
+.divider {
+height: 1px;
+background: linear-gradient(90deg, transparent, #D0DCE8, transparent);
+}
+
+/* ── ANIMATIONS ── */
 @keyframes fadeUp {
 from { opacity: 0; transform: translateY(18px); }
 to   { opacity: 1; transform: translateY(0); }
 }
-
-/* ── DIVIDER ─────────────────────────────── */
-.divider {
-height: 1px;
-background: linear-gradient(90deg, transparent, var(–border), transparent);
-margin: 0;
-}
-
-/* delay helpers */
 .d1 { animation-delay: 0.05s; }
 .d2 { animation-delay: 0.12s; }
 .d3 { animation-delay: 0.19s; }
@@ -418,7 +397,7 @@ margin: 0;
 </head>
 <body>
 
-<!-- ═══ HERO ═══════════════════════════════════════════════ -->
+<!-- HERO -->
 
 <section class="hero">
   <div class="container">
@@ -433,9 +412,9 @@ margin: 0;
   </div>
 </section>
 
-<!-- ═══ SNAPSHOT ═══════════════════════════════════════════ -->
+<!-- SNAPSHOT -->
 
-<section class="section" style="background: var(--lbg);">
+<section class="section bg-light">
   <div class="container">
     <div class="section-header">
       <span class="section-num">Background</span>
@@ -450,7 +429,7 @@ margin: 0;
       <div class="snap-card d3"><div class="snap-label">Veterans Wanted</div><div class="snap-value">2 veteran hires</div></div>
       <div class="snap-card d4"><div class="snap-label">Timeline</div><div class="snap-value">Hiring within 6 months — wants quick turnaround</div></div>
       <div class="snap-card d5"><div class="snap-label">Existing Orders</div><div class="snap-value">2 years of orders already secured</div></div>
-      <div class="snap-card d6"><div class="snap-label">Vet Experience</div><div class="snap-value">Owner has <em>never</em> worked with veterans before</div></div>
+      <div class="snap-card d6"><div class="snap-label">Vet Experience</div><div class="snap-value">Owner has never worked with veterans before</div></div>
       <div class="snap-card d1"><div class="snap-label">Roles</div><div class="snap-value">Industrial / supervisory — technical skills required</div></div>
     </div>
   </div>
@@ -458,9 +437,9 @@ margin: 0;
 
 <div class="divider"></div>
 
-<!-- ═══ STRATEGY ════════════════════════════════════════════ -->
+<!-- STRATEGY -->
 
-<section class="section" style="background: var(--white);">
+<section class="section bg-white">
   <div class="container">
     <div class="section-header">
       <span class="section-num">Question 1</span>
@@ -504,9 +483,9 @@ margin: 0;
 
 <div class="divider"></div>
 
-<!-- ═══ CONCERNS ════════════════════════════════════════════ -->
+<!-- CONCERNS -->
 
-<section class="section" style="background: var(--lbg);">
+<section class="section bg-light">
   <div class="container">
     <div class="section-header">
       <span class="section-num">Question 2</span>
@@ -516,55 +495,47 @@ margin: 0;
       </div>
     </div>
     <div class="concerns-grid">
-
-```
-  <div class="concern-card d1">
-    <div class="concern-title"><span class="warn">⚠</span> Company Stability — It's brand new</div>
-    <p class="concern-risk">How do we tell a veteran this is a solid long-term opportunity if the company hasn't proven itself yet?</p>
-    <div class="fix-row">
-      <span class="fix-badge">FIX</span>
-      <p class="fix-text">Lead with the 2 years of secured orders. Pull LMI data to show the sector's growth trajectory. Frame it as a ground-floor opportunity with supervisor-level upside.</p>
+      <div class="concern-card d1">
+        <div class="concern-title">⚠ Company Stability — It's brand new</div>
+        <p class="concern-risk">How do we tell a veteran this is a solid long-term opportunity if the company hasn't proven itself yet?</p>
+        <div class="fix-row">
+          <span class="fix-badge">FIX</span>
+          <p class="fix-text">Lead with the 2 years of secured orders. Pull LMI data to show the sector's growth trajectory. Frame it as a ground-floor opportunity with supervisor-level upside.</p>
+        </div>
+      </div>
+      <div class="concern-card d2">
+        <div class="concern-title">⚠ Employer Doesn't Understand Military Experience</div>
+        <p class="concern-risk">Owner may not recognize the value of rank, MOS, or military KSAs on a resume — or may undervalue them.</p>
+        <div class="fix-row">
+          <span class="fix-badge">FIX</span>
+          <p class="fix-text">Proactively educate before the first candidate is sent. Translate rank into civilian equivalents. Show how an E-7 maps to a floor supervisor or operations lead.</p>
+        </div>
+      </div>
+      <div class="concern-card d3">
+        <div class="concern-title">⚠ Resume Translation for the Veteran</div>
+        <p class="concern-risk">Veterans sometimes write resumes in military language — acronyms, rank titles, mission language — that civilian employers can't parse.</p>
+        <div class="fix-row">
+          <span class="fix-badge">FIX</span>
+          <p class="fix-text">Run resumes through a civilian translation process before submission. Use tools (ChatGPT, resume builders) to convert MOS experience into industry-relevant language.</p>
+        </div>
+      </div>
+      <div class="concern-card d4">
+        <div class="concern-title">⚠ Very High Skill Bar</div>
+        <p class="concern-risk">Employer wants someone with strong industrial AND leadership skills — a narrow target population.</p>
+        <div class="fix-row">
+          <span class="fix-badge">FIX</span>
+          <p class="fix-text">Be upfront about the difficulty of the match. Use all available networks — DVOP/LVER caseloads, job fairs, MO Jobs, Facebook — to cast a wide but targeted net.</p>
+        </div>
+      </div>
     </div>
-  </div>
-
-  <div class="concern-card d2">
-    <div class="concern-title"><span class="warn">⚠</span> Employer Doesn't Understand Military Experience</div>
-    <p class="concern-risk">Owner may not recognize the value of rank, MOS, or military KSAs on a resume — or may undervalue them.</p>
-    <div class="fix-row">
-      <span class="fix-badge">FIX</span>
-      <p class="fix-text">Proactively educate before the first candidate is sent. Translate rank into civilian equivalents. Show how an E-7 maps to a floor supervisor or operations lead.</p>
-    </div>
-  </div>
-
-  <div class="concern-card d3">
-    <div class="concern-title"><span class="warn">⚠</span> Resume Translation for the Veteran</div>
-    <p class="concern-risk">Veterans sometimes write resumes in military language — acronyms, rank titles, mission language — that civilian employers can't parse.</p>
-    <div class="fix-row">
-      <span class="fix-badge">FIX</span>
-      <p class="fix-text">Run resumes through a civilian translation process before submission. Use tools (ChatGPT, resume builders) to convert MOS experience into industry-relevant language.</p>
-    </div>
-  </div>
-
-  <div class="concern-card d4">
-    <div class="concern-title"><span class="warn">⚠</span> Very High Skill Bar</div>
-    <p class="concern-risk">Employer wants someone with strong industrial AND leadership skills — a narrow target population.</p>
-    <div class="fix-row">
-      <span class="fix-badge">FIX</span>
-      <p class="fix-text">Be upfront about the difficulty of the match. Use all available networks — DVOP/LVER caseloads, job fairs, MO Jobs, Facebook — to cast a wide but targeted net.</p>
-    </div>
-  </div>
-
-</div>
-```
-
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- ═══ QUESTIONS ════════════════════════════════════════════ -->
+<!-- QUESTIONS -->
 
-<section class="section" style="background: var(--white);">
+<section class="section bg-white">
   <div class="container">
     <div class="section-header">
       <span class="section-num">Question 3</span>
@@ -574,45 +545,39 @@ margin: 0;
       </div>
     </div>
     <div class="q-grid">
-
-```
-  <div class="q-col d1">
-    <div class="q-col-head">
-      <div class="icon">🤝</div>
-      <h3>Ask the Employer</h3>
+      <div class="q-col d1">
+        <div class="q-col-head">
+          <div class="icon">🤝</div>
+          <h3>Ask the Employer</h3>
+        </div>
+        <ul class="q-list">
+          <li>What are your 5–10 year growth projections?</li>
+          <li>What does the full compensation package look like — base pay, medical, dental, retirement?</li>
+          <li>Are you able to accommodate VA medical appointment leave?</li>
+          <li>What does a typical week look like for this role — travel, shifts, overtime?</li>
+          <li>Have you worked with any staffing partners or workforce agencies before?</li>
+          <li>What does success look like in the first 90 days?</li>
+        </ul>
+      </div>
+      <div class="q-col d2">
+        <div class="q-col-head">
+          <div class="icon">🔍</div>
+          <h3>Research to Do</h3>
+        </div>
+        <ul class="q-list">
+          <li>Pull LMI data for light manufacturing in this region — 3–5 year outlook</li>
+          <li>Review investor info / business filings if available — confirm company stability</li>
+          <li>Check the company's social media / website presence</li>
+          <li>Review any WOTC or hiring incentive eligibility</li>
+          <li>Identify veteran candidates in our caseload with industrial / supervisory background</li>
+          <li>Connect with DVOP/LVER counterparts in surrounding areas for pipeline support</li>
+        </ul>
+      </div>
     </div>
-    <ul class="q-list">
-      <li>What are your 5–10 year growth projections?</li>
-      <li>What does the full compensation package look like — base pay, medical, dental, retirement?</li>
-      <li>Are you able to accommodate VA medical appointment leave?</li>
-      <li>What does a typical week look like for this role — travel, shifts, overtime?</li>
-      <li>Have you worked with any staffing partners or workforce agencies before?</li>
-      <li>What does success look like in the first 90 days?</li>
-    </ul>
-  </div>
-
-  <div class="q-col d2">
-    <div class="q-col-head">
-      <div class="icon">🔍</div>
-      <h3>Research to Do</h3>
-    </div>
-    <ul class="q-list">
-      <li>Pull LMI data for light manufacturing in this region — 3–5 year outlook</li>
-      <li>Review investor info / business filings if available — confirm company stability</li>
-      <li>Check the company's social media / website presence</li>
-      <li>Review any WOTC or hiring incentive eligibility</li>
-      <li>Identify veteran candidates in our caseload with industrial / supervisory background</li>
-      <li>Connect with DVOP/LVER counterparts in surrounding areas for pipeline support</li>
-    </ul>
-  </div>
-
-</div>
-```
-
   </div>
 </section>
 
-<!-- ═══ BOTTOM LINE ══════════════════════════════════════════ -->
+<!-- BOTTOM LINE -->
 
 <section class="bottom-line">
   <div class="container">
@@ -642,14 +607,11 @@ margin: 0;
   </div>
 </section>
 
-<!-- ═══ FOOTER ════════════════════════════════════════════════ -->
-
 <footer class="footer">
   Gulf View Consulting &nbsp;·&nbsp; Employer Profile Exercise Debrief &nbsp;·&nbsp; Veterans' Employment and Training Service
 </footer>
 
 <script>
-  // Intersection observer for scroll-triggered animations
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
